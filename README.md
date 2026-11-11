@@ -1,62 +1,51 @@
-# Tax React Web
+# رَصْد — لوحة إدارة التفتيش الضريبي
 
-A React and TypeScript web application built with Vite.
+واجهة React عربية لإدارة المفتشين والشركات والجولات ومراجعة المحاضر، مبنية على جانب الإدارة من المقترح.
 
-## Requirements
+## التشغيل
 
-- [Node.js](https://nodejs.org/)
-- npm, included with Node.js
-- Git, if you are cloning the repository
+ثبّت Node.js وnpm، وافتح الطرفية داخل هذا المجلد:
 
-Check your installed versions:
-
-```bash
-node --version
-npm --version
-```
-
-## Installation
-
-```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
-cd tax-react-web
-npm install
-```
-
-## Run the development server
-
-```bash
+```sh
+npm ci
 npm run dev
 ```
 
-Open the URL shown in the terminal, usually `http://localhost:5173`.
+افتح الرابط الذي يظهر في الطرفية، عادة http://localhost:5173.
 
-## Available commands
-
-```bash
-npm run dev      # Start the development server
-npm run build    # Type-check and create a production build
-npm run preview  # Preview the production build locally
-npm run lint     # Check the code with ESLint
-```
-
-## Production build
-
-```bash
+```sh
 npm run build
+npm run preview
+npm run lint
 ```
 
-The generated files are placed in the `dist` folder.
+## الصفحات
 
-## Project structure
+- نظرة عامة: مؤشرات وإنجاز الجولات وآخر المحاضر.
+- إدارة المفتشين: إضافة الملفات وتعديل بياناتها وحالة المفتش.
+- الشركات والأنشطة: الملفات والأرقام الضريبية والإحداثيات والخطورة.
+- المهام والجولات: إسناد الزيارات ومتابعة حالتها.
+- المحاضر والمراجعة: الاعتماد والإعادة مع السبب وسجل القرارات وطباعة PDF وQR.
+- الخريطة الميدانية: موقع النشاط المختار والتصفية حسب المنطقة والمخالفات.
+- الإحصاءات: توزيع المحاضر حسب المنطقة ونوع المخالفة ونسبة إنجاز الجولات.
 
-```text
-src/         Application source code
-public/      Public static files
-index.html   Main HTML entry point
-package.json Project scripts and dependencies
+## البيانات والتنظيم
+
+السجلات التجريبية في `src/lists/data.ts`، والتعديلات محفوظة في localStorage.
+لا يوجد خادم أو مصادقة أو مزامنة بين الأجهزة في هذه النسخة.
+رمز QR مرجع محلي، وليس خدمة تحقق رسمية.
+لا توجد صور معاينة فعلية في السجلات التجريبية.
+للطباعة: افتح محضرًا، اختر «طباعة / حفظ PDF»، ثم «حفظ بتنسيق PDF» في نافذة المتصفح.
+
+الحزم موثقة في [PACKAGES.md](PACKAGES.md)، والنطاق والحدود في [IMPLEMENTATION.md](IMPLEMENTATION.md).
+كل ملف مصدر أقل من 300 سطر؛ ملفات القفل والإنتاج مولدة آليًا.
+
+## العمل المشترك
+
+```sh
+git clone https://github.com/abdalraof-albarbar/Tax-React-Web.git
+cd Tax-React-Web
+git switch -c feature/task-name
 ```
 
-## Troubleshooting
-
-If dependencies are missing, run `npm install` again. If port 5173 is busy, Vite will display another available local URL.
+اعملوا في فروع منفصلة، وارفعوا التعديلات عبر Pull Request بعد مراجعتها.

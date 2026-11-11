@@ -1,0 +1,65 @@
+@media print {
+  body {
+    background: white;
+  }
+  .sidebar,
+  .topbar,
+  .menu-overlay,
+  main > :not(dialog) {
+    display: none !important;
+  }
+  main {
+    display: block !important;
+    padding: 0;
+    margin: 0;
+    max-width: none;
+  }
+  .app,
+  .main-shell {
+    display: block;
+    margin: 0;
+    width: 100%;
+  }
+  dialog {
+    display: block !important;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    max-width: none;
+    max-height: none;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
+    padding: 10mm;
+    direction: rtl;
+  }
+  .modal-head,
+  .no-print {
+    display: none !important;
+  }
+  dialog::backdrop {
+    background: white;
+  }
+  .print-report {
+    display: block;
+  }
+  .report-brand,
+  .details {
+    break-inside: avoid;
+  }
+  .print-report {
+    font-size: 12px;
+  }
+  .badge {
+    border: 1px solid #aaa;
+  }
+  .qr {
+    width: 100px;
+    height: 100px;
+  }
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+}
