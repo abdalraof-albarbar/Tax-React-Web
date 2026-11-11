@@ -1,0 +1,264 @@
+.welcome-art {
+  width: 250px;
+  align-self: stretch;
+  display: grid;
+  place-items: center;
+  color: #427e60;
+  position: relative;
+}
+.welcome-art > svg {
+  z-index: 1;
+  filter: drop-shadow(0 10px 15px #28664620);
+}
+.orbit {
+  position: absolute;
+  border: 1px solid #cedfd1;
+  border-radius: 50%;
+  width: 175px;
+  height: 175px;
+}
+.orbit.two {
+  width: 240px;
+  height: 240px;
+  border-style: dashed;
+  opacity: 0.6;
+}
+.art-tag {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  font-size: 9px;
+  background: #fff;
+  border: 1px solid #dce8df;
+  padding: 6px 12px;
+  border-radius: 6px;
+  display: flex;
+  gap: 7px;
+  z-index: 2;
+  transform: rotate(-5deg);
+}
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 24px;
+}
+.stat {
+  background: white;
+  border: 1px solid #e7edeb;
+  border-radius: 11px;
+  padding: 20px;
+  position: relative;
+}
+.stat p {
+  color: #7e9085;
+  font-size: 11px;
+  margin: 2px 0 8px;
+}
+.stat > strong {
+  font-size: 31px;
+  color: #233f32;
+  display: block;
+  line-height: 1.5;
+}
+.stat > small {
+  display: block;
+  color: #a0ada5;
+  font-size: 9px;
+  margin-top: 7px;
+}
+.stat-icon {
+  position: absolute;
+  left: 18px;
+  top: 20px;
+  display: grid;
+  place-items: center;
+  width: 39px;
+  height: 39px;
+  border-radius: 10px;
+}
+.teal {
+  color: #278568;
+  background: #edf7f2;
+}
+.blue {
+  color: #528fba;
+  background: #edf4fb;
+}
+.orange {
+  color: #c59645;
+  background: #fcf6e9;
+}
+.purple {
+  color: #8b75b4;
+  background: #f4f0fa;
+}
+.panel {
+  background: #fff;
+  border: 1px solid #e7edeb;
+  border-radius: 11px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 22px;
+  gap: 15px;
+}
+.toolbar p {
+  font-size: 10px;
+  color: #97a49b;
+  margin-top: 3px;
+}
+.toolbar select {
+  font-size: 11px;
+}
+.table-wrap {
+  overflow-x: auto;
+}
+.analytics-grid {
+  display: grid;
+  grid-template-columns: 1.9fr 1fr;
+  gap: 20px;
+}
+.analytics-grid > .panel {
+  min-width: 0;
+}
+.bars {
+  height: 190px;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 15px 24px 0;
+  background: repeating-linear-gradient(to top, transparent 0, transparent 49px, #f1f4f2 50px);
+}
+.bar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+.bar-item strong {
+  font-size: 10px;
+  color: #729283;
+}
+.bar-track {
+  width: 32px;
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+}
+.bar-track div {
+  width: 100%;
+  background: #8ebaa3;
+  border-radius: 4px 4px 0 0;
+  min-height: 3px;
+}
+.bar-item:nth-child(2n) .bar-track div {
+  background: #2f8468;
+}
+.bar-item > span {
+  font-size: 9px;
+  color: #8b9a91;
+  margin-top: 12px;
+  white-space: nowrap;
+}
+.chart-note {
+  font-size: 9px;
+  color: #a6b1a9;
+  padding: 16px 25px;
+}
+.completion {
+  padding: 20px 24px;
+}
+.completion > p {
+  font-size: 10px;
+  margin-top: 4px;
+}
+.donut {
+  width: 145px;
+  height: 145px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: 20px auto;
+}
+.donut > div {
+  width: 117px;
+  height: 117px;
+  border-radius: 50%;
+  background: #fff;
+  display: grid;
+  align-content: center;
+  text-align: center;
+}
+.donut strong {
+  font-size: 27px;
+}
+.donut small {
+  color: #9ba89f;
+  font-size: 10px;
+}
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  font-size: 10px;
+  color: #82948a;
+}
+.legend span {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.legend i,
+.badge i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.legend i {
+  background: #137c66;
+}
+.legend .pale {
+  background: #dcebe2;
+}
+.legend b {
+  color: #3a5645;
+}
+.text-button {
+  border: 0;
+  background: transparent;
+  padding: 3px;
+  color: #317d60;
+  font-size: 11px;
+  font-weight: 500;
+}
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-size: 10px;
+  white-space: nowrap;
+}
+.green {
+  background: #edf6f0;
+  color: #408764;
+}
+.red {
+  background: #fcf0ed;
+  color: #bb6e59;
+}
+.amber {
+  background: #fcf6e8;
+  color: #b18b40;
+}
+.gray {
+  background: #f0f3f4;
+  color: #84938b;
+}
